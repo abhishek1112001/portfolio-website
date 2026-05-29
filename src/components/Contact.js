@@ -36,8 +36,8 @@ export default function Contact() {
       id="contact"
       ref={ref}
       style={{
-        padding: '7rem 2rem 5rem',
-        background: 'linear-gradient(180deg, transparent 0%, rgba(108, 99, 255, 0.04) 50%, transparent 100%)',
+        padding: '2.4rem 2rem 1.8rem',
+        background: 'linear-gradient(180deg, transparent 0%, rgba(43, 47, 160, 0.05) 50%, transparent 100%)',
       }}
     >
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -93,28 +93,28 @@ export default function Contact() {
                   label: 'Email',
                   value: 'abhishekgothankar01@gmail.com',
                   href: 'mailto:abhishekgothankar01@gmail.com',
-                  color: '#6c63ff',
+                  color: '#2B2FA0',
                 },
                 {
                   icon: <FiPhone size={18} />,
                   label: 'Phone',
                   value: '+91 9833505711',
                   href: 'tel:+919833505711',
-                  color: '#00d4ff',
+                  color: '#E8602C',
                 },
                 {
                   icon: <FiLinkedin size={18} />,
                   label: 'LinkedIn',
                   value: 'Abhishek Gothankar',
                   href: 'https://linkedin.com/in/abhishek-gothankar',
-                  color: '#00ffb3',
+                  color: '#C9A96A',
                 },
                 {
                   icon: <FiMapPin size={18} />,
                   label: 'Location',
                   value: 'Pune, India',
                   href: null,
-                  color: '#ff6584',
+                  color: '#D94FB5',
                 },
               ].map((item) => (
                 <motion.div
@@ -227,8 +227,8 @@ export default function Contact() {
                   justifyContent: 'center',
                   opacity: sending ? 0.7 : 1,
                   background: sent
-                    ? 'linear-gradient(135deg, #00ffb3, #00d4aa)'
-                    : 'linear-gradient(135deg, #6c63ff, #8b83ff)',
+                    ? 'linear-gradient(135deg, #C9A96A, #D6BA84)'
+                    : 'linear-gradient(135deg, #2B2FA0, #3B3FB0)',
                 }}
               >
                 {sent ? '✓ Message Sent!' : sending ? 'Sending...' : <><FiSend /> Send Message</>}

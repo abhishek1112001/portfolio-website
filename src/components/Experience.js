@@ -7,7 +7,7 @@ const experiences = [
     role: 'Jr. Software Developer',
     period: 'Jan 2025 – Present',
     location: 'Pune, India',
-    color: '#6c63ff',
+    color: '#2B2FA0',
     points: [
       'Developed and maintained scalable SaaS applications with React.js and JavaScript, enhancing performance and responsive UI design.',
       'Designed and implemented RESTful APIs with Node.js and Express.js for seamless web & mobile integration.',
@@ -20,7 +20,7 @@ const experiences = [
     role: 'Software Development Intern',
     period: 'Jun 2024 – Sep 2024',
     location: 'Bopal (Online)',
-    color: '#00d4ff',
+    color: '#E8602C',
     points: [
       'Contributed to frontend development at a fast-growing IT company providing software, website, and application development solutions globally.',
       'Worked as a Frontend Developer using React, HTML, CSS, Tailwind CSS, and JavaScript.',
@@ -62,8 +62,8 @@ export default function Experience() {
       id="experience"
       ref={ref}
       style={{
-        padding: '7rem 2rem',
-        background: 'linear-gradient(180deg, transparent 0%, rgba(108, 99, 255, 0.03) 50%, transparent 100%)',
+        padding: '2.4rem 2rem',
+        background: 'linear-gradient(180deg, transparent 0%, rgba(43, 47, 160, 0.05) 50%, transparent 100%)',
       }}
     >
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>

@@ -6,17 +6,21 @@
   --bg-secondary: #0f0f1a;
   --bg-card: #13131f;
   --bg-card-hover: #1a1a2e;
-  --accent-primary: #6c63ff;
-  --accent-secondary: #ff6584;
-  --accent-cyan: #00d4ff;
-  --accent-green: #00ffb3;
-  --text-primary: #f0f0ff;
-  --text-secondary: #a0a0c0;
-  --text-muted: #606080;
-  --border: rgba(108, 99, 255, 0.15);
-  --border-hover: rgba(108, 99, 255, 0.4);
-  --glow-purple: rgba(108, 99, 255, 0.3);
-  --glow-cyan: rgba(0, 212, 255, 0.3);
+  --bg-primary: #E8EEF2;
+  --bg-secondary: #DFE7EC;
+  --bg-card: #F4F7F9;
+  --bg-card-hover: #FFFFFF;
+  --accent-primary: #2B2FA0;
+  --accent-secondary: #D94FB5;
+  --accent-cyan: #E8602C;
+  --accent-green: #C9A96A;
+  --text-primary: #1A1F6E;
+  --text-secondary: #2B2FA0;
+  --text-muted: #888888;
+  --border: rgba(43, 47, 160, 0.15);
+  --border-hover: rgba(43, 47, 160, 0.3);
+  --glow-purple: rgba(217, 79, 181, 0.2);
+  --glow-cyan: rgba(232, 96, 44, 0.2);
 }
 
 * {
@@ -52,12 +56,7 @@ body {
 
 /* ── Noise texture overlay ── */
 body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 /* ── Gradient Orbs ── */
@@ -100,7 +99,7 @@ section {
 
 /* ── Gradient Text ── */
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-cyan) 100%);
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -115,19 +114,20 @@ section {
 
 /* ── Glass Card ── */
 .glass-card {
-  background: rgba(19, 19, 31, 0.6);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border);
   border-radius: 16px;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 8px 32px rgba(26, 31, 110, 0.05);
 }
 
 .glass-card:hover {
   border-color: var(--border-hover);
-  background: rgba(26, 26, 46, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(108, 99, 255, 0.15), 0 0 0 1px var(--border-hover);
+  box-shadow: 0 20px 60px rgba(26, 31, 110, 0.1), 0 0 0 1px var(--border-hover);
 }
 
 /* ── Section Title ── */
@@ -149,13 +149,13 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(108, 99, 255, 0.1);
-  border: 1px solid rgba(108, 99, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 100px;
   padding: 0.3rem 1rem;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--accent-primary);
+  color: var(--text-secondary);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 1rem;
@@ -166,7 +166,7 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, var(--accent-primary), #8b83ff);
+  background: linear-gradient(135deg, var(--accent-primary), #ff8533);
   color: white;
   padding: 0.85rem 2rem;
   border-radius: 12px;
@@ -213,8 +213,8 @@ section {
 }
 
 .btn-outline:hover {
-  background: rgba(108, 99, 255, 0.1);
-  border-color: var(--accent-primary);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border-hover);
   transform: translateY(-2px);
 }
 
@@ -395,7 +395,7 @@ section {
 /* ── Grid BG pattern ── */
 .hero-grid {
   background-image:
-    linear-gradient(rgba(108, 99, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(108, 99, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(26, 31, 110, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 31, 110, 0.05) 1px, transparent 1px);
   background-size: 60px 60px;
 }

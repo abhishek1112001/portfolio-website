@@ -21,27 +21,29 @@ export default function Navbar() {
 
   return (
     <motion.header
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      initial={{ y: -100, x: '-50%', opacity: 0 }}
+      animate={{ y: 0, x: '-50%', opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       style={{
         position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
+        top: '24px',
+        left: '50%',
+        width: '90%',
+        maxWidth: '1200px',
         zIndex: 100,
-        padding: '1rem 2rem',
+        padding: '0.5rem 1.5rem',
+        borderRadius: '100px',
         transition: 'all 0.4s ease',
         background: scrolled
-          ? 'rgba(10, 10, 15, 0.85)'
-          : 'transparent',
-        backdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(108, 99, 255, 0.1)' : 'none',
+          ? 'rgba(255, 255, 255, 0.9)'
+          : 'rgba(255, 255, 255, 0.6)',
+        backdropFilter: 'blur(24px)',
+        border: '1px solid rgba(43, 47, 160, 0.1)',
+        boxShadow: scrolled ? '0 10px 30px rgba(0, 0, 0, 0.4)' : '0 10px 30px rgba(0, 0, 0, 0.2)',
       }}
     >
       <nav style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
+        width: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -54,10 +56,7 @@ export default function Navbar() {
             fontWeight: 800,
             fontSize: '1.3rem',
             textDecoration: 'none',
-            background: 'linear-gradient(135deg, #6c63ff, #00d4ff)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
+            color: '#1A1F6E',
             letterSpacing: '-0.03em',
           }}
         >
@@ -116,9 +115,9 @@ export default function Navbar() {
               flexDirection: 'column',
               gap: '1rem',
               padding: '1rem',
-              background: 'rgba(13, 13, 20, 0.95)',
+              background: 'rgba(255, 255, 255, 0.95)',
               borderRadius: '12px',
-              border: '1px solid rgba(108, 99, 255, 0.15)',
+              border: '1px solid rgba(43, 47, 160, 0.1)',
             }}
           >
             {navLinks.map((link) => (

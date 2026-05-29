@@ -6,7 +6,7 @@ export default function Footer() {
     <footer style={{
       position: 'relative',
       zIndex: 1,
-      borderTop: '1px solid rgba(108, 99, 255, 0.1)',
+      borderTop: '1px solid rgba(43, 47, 160, 0.1)',
       padding: '2.5rem 2rem',
       textAlign: 'center',
     }}>
@@ -16,10 +16,7 @@ export default function Footer() {
           style={{
             fontWeight: 800,
             fontSize: '1.2rem',
-            background: 'linear-gradient(135deg, #6c63ff, #00d4ff)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
+            color: '#1A1F6E',
             letterSpacing: '-0.03em',
           }}
         >
@@ -27,7 +24,7 @@ export default function Footer() {
         </motion.div>
 
         <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-          Built with <FiHeart size={13} style={{ color: '#ff6584' }} /> by Abhishek Gothankar — {new Date().getFullYear()}
+          Built with <FiHeart size={13} style={{ color: '#D94FB5' }} /> by Abhishek Gothankar — {new Date().getFullYear()}
         </p>
 
         <div style={{ display: 'flex', gap: '1.5rem' }}>

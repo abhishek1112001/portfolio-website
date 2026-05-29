@@ -4,7 +4,7 @@ import { motion, useInView } from 'framer-motion';
 const skillGroups = [
   {
     category: 'Frontend',
-    color: '#6c63ff',
+    color: '#2B2FA0',
     icon: '🎨',
     skills: [
       { name: 'React.js', level: 90 },
@@ -16,7 +16,7 @@ const skillGroups = [
   },
   {
     category: 'Backend',
-    color: '#00d4ff',
+    color: '#E8602C',
     icon: '⚙️',
     skills: [
       { name: 'Node.js', level: 82 },
@@ -27,7 +27,7 @@ const skillGroups = [
   },
   {
     category: 'Cloud & DevOps',
-    color: '#00ffb3',
+    color: '#C9A96A',
     icon: '☁️',
     skills: [
       { name: 'AWS Lambda', level: 78 },
@@ -39,7 +39,7 @@ const skillGroups = [
   },
   {
     category: 'Database & Tools',
-    color: '#ff6584',
+    color: '#D94FB5',
     icon: '🗄️',
     skills: [
       { name: 'DynamoDB', level: 72 },
@@ -80,7 +80,7 @@ function SkillBar({ skill, color, inView, delay }) {
       </div>
       <div style={{
         height: '6px',
-        background: 'rgba(255,255,255,0.05)',
+        background: 'rgba(43, 47, 160, 0.05)',
         borderRadius: '100px',
         overflow: 'hidden',
       }}>
@@ -109,7 +109,7 @@ export default function Skills() {
       id="skills"
       ref={ref}
       style={{
-        padding: '7rem 2rem',
+        padding: '2.4rem 2rem',
         background: 'linear-gradient(180deg, transparent 0%, rgba(0, 212, 255, 0.02) 50%, transparent 100%)',
       }}
     >
